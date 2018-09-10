@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giphy</title>
+    <!-- Style sheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+<body>  
+
+   <!-- Animals button Section -->
+    <div class="container">
+      <div class="row">
+        <h1>Animal Search</h1>
+      </div>
+      <!-- Animals Button-->
+      <div class="row" id="animal-btn">
+      </div>
+    </div>    
+
+    <!-- Add New Animal Section -->
+    <div class="container">
+      <div class="row">
+        <form id="input-form">
+          <div>
+            <label for="animal-input">Add an animal</label><br>
+            <input type="text" id="animal-input"><br>
+          </div>
+          <button id="add-animal" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>  
+
+    <!-- Display Result -->
+    <div class="container">
+      <div class="row-Result">  
+      </div>
+    </div> 
+
+
+    <!-- JQuery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- My javascript -->
+    <script src="app.js"></script>
+
+</body>
+</html>
