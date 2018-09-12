@@ -1,7 +1,10 @@
-// Initial array of animals
+
+// Set limit 10 on number of api result
+const limit = 10  
+
 var topics = ["animal"]
 
-
+// Initial array of animals
 var animals = [ "dog", "cat", "rabbit", "hamster", "skunk", "goldfish", "bird", "ferret", "turtle", 
                 "sugar glider", "chinchilla", "hedgehog", "hermit crab", "chinchilla", "hedgehog", 
                 "hermit crab", "gerbil", "pygmy goat", "chicken", "capybara", "teacup pig", "serval",
@@ -27,7 +30,7 @@ $(document).on("click",".animalbtn", function(){
     searchanimal = $(this).attr("data-value")
     console.log($(this).attr("data-value"))
 
-    queryURL = "https://api.giphy.com/v1/gifs/search?q=funny+" + searchanimal + "&api_key=" + apikey 
+    queryURL = "https://api.giphy.com/v1/gifs/search?q=funny+" + searchanimal + "&api_key=" + apikey + "&limit=" + limit;
 
     console.log(queryURL)
 
@@ -39,11 +42,16 @@ $(document).on("click",".animalbtn", function(){
         console.log(r.data[0].rating);
         console.log(r.data[0].embed_url);  
         console.log(r.data.length)
-        $('.row-Result').html(`
-        <li>Rating: ${r.data[0].rating}</li>
-        <img id="animal-image" src="${r.data[0].images.preview_gif.url}" alt="animal">  
-       `)
-     
+
+        $('.row-Result').empty()
+        for (let i=0; i<r.data.length; i++){
+            $('.row-Result').append(`
+            <td>
+                <p>Rating: ${r.data[i].rating}</p>
+                <img id="animal-image" src="${r.data[i].images.preview_gif.url}" alt="animal">  
+            </td>
+            `)
+        }  
     })   
 })
 

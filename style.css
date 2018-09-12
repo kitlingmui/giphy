@@ -6,6 +6,12 @@
     margin-top: 10px;
 }
 
-li{
-    list-style-type: none;
+
+#animal-image{
+    width: auto;
+    height: 150px;
+}
+
+.Result{
+    display: inline;
 }
