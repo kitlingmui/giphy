@@ -6,12 +6,17 @@
     margin-top: 10px;
 }
 
-
 #animal-image{
     width: auto;
     height: 150px;
+    margin-left: 5px;
 }
 
 .Result{
-    display: inline;
+    display: inline-block;
+}
+
+.animalbtn{
+    margin-left: 3px;
+    margin-top: 3px;
 }
